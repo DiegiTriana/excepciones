@@ -34,7 +34,7 @@ public class ListaPais {
     @Override
     public String toString() {
        
-       return "El array Sera: " + "/n"+ myArray;
+       return "El array Sera: " + myArray + "\n";
     }
     
     public String getListado(int limite){
