@@ -14,13 +14,14 @@ import Modelo.ListaPais;
  */
 public class TestPais {
     public static void main(String[] args){
-    
+        ListaPais myLista = new ListaPais();
+        
         Pais pais1 = new Pais("colombia", 200, 300, 400);
         Pais pais2 = new Pais("España", 500, 366, 700);
         Pais pais3 = new Pais("colombia", 1000, 5600, 900);
         Pais pais4 = new Pais("colombia", 1000, 3890, 2890);
         
-        ListaPais myLista = new ListaPais();
+    
         
         myLista.insertar(pais1);
         myLista.insertar(pais2);
@@ -28,6 +29,6 @@ public class TestPais {
         myLista.insertar(pais4);
         
         System.out.print("EL LISTADO DE PAISES ES: " + myLista.toString());
-        System.out.print("EL getListado SERA: " + myLista.getListado(900));
+        System.out.println("EL getListado SERA: " + myLista.getListado(900));
     }
 }

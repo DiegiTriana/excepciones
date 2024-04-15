@@ -25,6 +25,7 @@ public class Pais implements Comparable<Pais>{
         this.cantidad_Mujeres = cantidad_Mujeres;
         this.cantidad_Hombres = cantidad_Hombres;
         this.cantidad_Niños = cantidad_Niños;
+        
     }
 
     public String getNombre() {

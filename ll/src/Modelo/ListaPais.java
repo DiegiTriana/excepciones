@@ -26,14 +26,17 @@ public class ListaPais {
         this.myArray = myArray;
     }
     
-    public void insertar(){
+    public void insertar(Pais nuevo){
     this.myArray.add(pais);
         
     }
 
     @Override
     public String toString() {
-        return "ListaPais{" + "myArray=" + myArray + '}';
+        for(Pais recorrido: myArray){
+            System.out.print("EL ARRAY SERA: " + recorrido);
+        }
+       return "El array Sera: " ;
     }
     
     public String getListado(int limite){
