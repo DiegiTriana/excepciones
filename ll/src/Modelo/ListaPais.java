@@ -14,7 +14,7 @@ import java.util.ArrayList;
  */
 public class ListaPais {
     private ArrayList<Pais> myArray = new ArrayList<>();
-    Pais pais = new Pais();
+   
     public ListaPais() {
     }
 
@@ -27,16 +27,14 @@ public class ListaPais {
     }
     
     public void insertar(Pais nuevo){
-    this.myArray.add(pais);
+    this.myArray.add(nuevo);
         
     }
 
     @Override
     public String toString() {
-        for(Pais recorrido: myArray){
-            System.out.print("EL ARRAY SERA: " + recorrido);
-        }
-       return "El array Sera: " ;
+       
+       return "El array Sera: " + "/n"+ myArray;
     }
     
     public String getListado(int limite){

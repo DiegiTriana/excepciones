@@ -15,6 +15,7 @@ import Modelo.ListaPais;
 public class TestPais {
     public static void main(String[] args){
         ListaPais myLista = new ListaPais();
+        Pais pais = new Pais();
         
         Pais pais1 = new Pais("colombia", 200, 300, 400);
         Pais pais2 = new Pais("España", 500, 366, 700);
@@ -28,7 +29,7 @@ public class TestPais {
         myLista.insertar(pais3);
         myLista.insertar(pais4);
         
-        System.out.print("EL LISTADO DE PAISES ES: " + myLista.toString());
+        System.out.println( myLista.toString());
         System.out.println("EL getListado SERA: " + myLista.getListado(900));
     }
 }
