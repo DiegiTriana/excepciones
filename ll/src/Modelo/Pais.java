@@ -10,7 +10,7 @@ import java.util.Objects;
  *
  * @author Lab05pc15
  */
-public class Pais implements comparableTo<Pais> {
+public class Pais implements Comparable<Pais>{
 
     private String nombre;
     private int cantidad_Mujeres;
@@ -81,8 +81,8 @@ public class Pais implements comparableTo<Pais> {
             return false;
         }
         final Pais other = (Pais) obj;
-        float hashMio = this.getHash();
-        float hashOtro = other.getHash();
+        float hashMio = this.cantidadTotal();
+        float hashOtro = other.cantidadTotal();
 
         if (hashMio == hashOtro) {
             return true;
@@ -91,8 +91,25 @@ public class Pais implements comparableTo<Pais> {
 
     }
 
-    public int comparableTo() {
-        int personasTotalesPais = this.cantidadTotal();
+    
+
+    public int cantidadTotal() {
+
+        int resultado = this.cantidad_Hombres + this.cantidad_Mujeres + this.cantidad_Niños;
+        return resultado;
+
+    }
+
+    
+
+    @Override
+    public String toString() {
+        return "Pais{" + "nombre=" + nombre + "Cantidad Total personas= "+ this.cantidadTotal();
+    }
+
+    @Override
+    public int compareTo(Pais o) {
+           int personasTotalesPais = this.cantidadTotal();
         int personasTotalesPais2 = this.cantidadTotal();
         int RestaPersonas = personasTotalesPais - personasTotalesPais2;
 
@@ -103,26 +120,7 @@ public class Pais implements comparableTo<Pais> {
 
         }
         return 1;
-
     }
-
-    public int cantidadTotal() {
-
-        int resultado = this.cantidad_Hombres + this.cantidad_Mujeres + this.cantidad_Niños;
-        return resultado;
-
-    }
-
-    public int getHash() {
-
-        int primo = 31;
-
-        int hashSolucion;
-
-        hashSolucion = primo * this.cantidad_Hombres + this.cantidad_Mujeres * this.cantidad_Niños;
-
-        return hashSolucion;
-
-    }
+    
 
 }
